@@ -3,7 +3,7 @@ Broadway.js
 A JavaScript H.264 decoder.
 
 
-View a Live Demo at: http://bkw.github.com/Broadway/storyDemo.html or http://bkw.github.com/Broadway/treeDemo.html
+View a Live Demo at: http://bkw.github.io/Broadway/storyDemo.html or http://bkw.github.io/Broadway/treeDemo.html
 
 Thanks https://github.com/bkw for hosting the demos.
 
