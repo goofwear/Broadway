@@ -2,7 +2,26 @@ if (FS) {
   Module['FS'] = FS;
 }
 Module['HEAPU8'] = HEAPU8;
+var CorrectionsMonitor = {
+  MAX_ALLOWED: 0, // XXX
+  corrections: 0,
+  sigs: {},
+
+  note: function(type, succeed, sig) {
+    if (!succeed) {
+      this.corrections++;
+      if (this.corrections >= this.MAX_ALLOWED) abort('\n\nToo many corrections!');
+    }
+  },
+
+  print: function() {
+  }
+};
 Module['CorrectionsMonitor'] = CorrectionsMonitor; 
+function _broadwayOnPictureDecoded($buffer,width,height){window["_broadwayOnPictureDecoded"]($buffer,width,height)}
+Module["_broadwayOnPictureDecoded"]=_broadwayOnPictureDecoded;
+function _broadwayOnHeadersDecoded(){window["_broadwayOnHeadersDecoded"]()}
+Module["_broadwayOnHeadersDecoded"]=_broadwayOnHeadersDecoded;
 
 FS['createDataFile'] = FS.createDataFile;
 
